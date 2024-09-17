@@ -4,8 +4,8 @@ import "izitoast/dist/css/iziToast.min.css";
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-import { getPictures } from "./pixabay-api";
-import { createMarkup } from "./render-functions"
+import { getPictures } from "./js/pixabay-api";
+import { createMarkup } from "./js/render-functions"
 
 const formSearch = document.querySelector('.js-search');
 const listImages = document.querySelector('.gallery');
@@ -29,6 +29,9 @@ function onSearch(event) {
           iziToast.error({
             title: 'Error',
             message: 'Sorry, there are no images matching your search query. Please try again!',
+            backgroundColor: "red",
+            position: 'topRight',
+            color: "white",
           });
         }
   
